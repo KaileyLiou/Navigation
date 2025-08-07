@@ -14,22 +14,45 @@ struct ContentView: View {
             
             VStack { // VStack to organize links top to bottom
                 
-                Text("This is the root view 🌳")
+                Text("Home View")
                     .font(.title2)
                 
-                NavigationLink(destination: SecondView()) { // destination shows what will be on the new view
-                    Text("Click me!") // the label content shows to the user the link
+//                NavigationLink(destination: SecondView()) { // destination shows what will be on the new view
+//                    Text("Click me!") // the label content shows to the user the link
+//                }
+                
+                NavigationLink(destination: About()) {
+                    Text("About View")
+                        .font(.title2)
                 }
                 
-                NavigationLink(destination: Text("You've arrived to the Third View 🎊")) { // destination shows what will be on the new view
-                    Text("Click me!") // the label content shows to the user the link
+                NavigationLink(destination: Contact()) {
+                    Text("Contact View")
+                        .font(.title2)
+                }
+                
+                NavigationLink(destination: Help()) {
+                    Text("Help View")
+                        .font(.title2)
                 }
                 
             } // end of VStack
             
+            .toolbar {
+                NavigationLink(destination: About()) {
+                        Text("About 👩🏻")
+                }
+                NavigationLink(destination: Contact()) {
+                        Text("Contact 📞")
+                }
+                NavigationLink(destination: Help()) {
+                        Text("Help ❓")
+                }
+            }
+            
             .navigationTitle("Home 🏠")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
+//            .navigationBarHidden(true)
         } // end of the NavigationStack
 
     }
