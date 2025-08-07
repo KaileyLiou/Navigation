@@ -9,7 +9,11 @@ import SwiftUI
 
 struct About: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hi, I'm Kailey!")
+            .font(.largeTitle)
+            .foregroundColor(Color.pink)
+        Text("I'm a rising high school junior in NYC and a Kode With Klossy scholar!")
+            .multilineTextAlignment(.center)
     }
 }
 
